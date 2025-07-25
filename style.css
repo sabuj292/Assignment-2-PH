@@ -202,28 +202,43 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    gap: 2rem;
+    gap: 40px;
     flex-wrap: wrap;
     background-color: #fcf7f0;
+    margin: 120px 150px 120px 150px;
+   
 }
 .lover-content {
     flex: 1;
 }
+.lover-content h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+.lover-content ul li {
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
 .lover-image {
     position: relative;
+    width: fit-content;
 }
 .lover-image img:first-child {
     max-width: 100%;
-    height: auto;
+    height: 600px;
+    
 }
 .trusted-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 50px;
+  position: absolute;
+  top: -130px;
+  right: -100px;
+  width: 286px;
+  height: 286px;
+  z-index: 10;
 }
+
 .spin {
-    animation: spin 4s linear infinite;
+    animation: spin 10s linear infinite;
 }
 @keyframes spin {
     0% { transform: rotate(0deg); }

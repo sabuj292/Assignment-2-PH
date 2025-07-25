@@ -11,36 +11,81 @@ body {
 }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #fff;
-    flex-wrap: wrap;
-}
-.nav-logo img {
-    height: 40px;
-}
-.nav-links ul {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    align-items: center;
-}
-.nav-links a {
-    text-decoration: none;
-    font-weight: 600;
-    color: black;
-    display: flex;
-    align-items: center;
-}
-.cart-icon img {
-    width: 20px;
-    margin-right: 4px;
+/* Reset some spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Banner */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f6f8fc;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 150px;
+  background-color: #f6f8fc;
+}
+
+.nav-logo {
+  width: 120px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-cart img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-cart span {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
+
+/* ✅ Responsive: iPhone (≤ 430px) */
+@media (max-width: 430px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .navbar {
+    padding: 20px 30px;
+  }
+}
+
+
+
+/* banner section */
 
 .banner {
   display: flex;
@@ -53,6 +98,7 @@ body {
 
 .banner-content {
   max-width: 500px;
+  text-align: justify;
 }
 
 .banner-content h1 {
@@ -74,6 +120,7 @@ body {
   color: #5f5f5f;
   margin-top: 20px;
   line-height: 1.6;
+  text-align: justify;
 }
 
 .hero-image img {
@@ -82,35 +129,167 @@ body {
   height: auto;
 }
 
-/* Responsive for iPhone 14 & 15 Pro (≤ 430px) */
+
+
 @media (max-width: 430px) {
   .banner {
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     padding: 60px 30px;
-    text-align: left;
+    text-align: center;
   }
 
-  .banner-content h1 {
-    font-size: 32px;
+  .hero-image {
+    order: -1; /* ✅ Move image to top */
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-image img {
     width: 100%;
     max-width: 100%;
+    height: auto;
+  }
+
+  .banner-content {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .banner-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .banner-content p {
+    font-size: 15px;
+    text-align: center; /* ✅ align paragraph like image 1 */
   }
 }
 
+
+
+
+
+
 /* Plants Section */
+
+/* 🌿 PLANTS SECTION */
+
 .plants {
+  text-align: center;
+  padding: 2rem;
+  background: #f7f7f7;
+  margin: 0 150px 50px 150px;
+}
+
+.plants-header {
+  margin-bottom: 50px;
+}
+
+.plants-header h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.plants-header .orange-text {
+  color: #f1600d;
+}
+
+.plants-header .black-text {
+  color: #000000;
+}
+
+.plants-subtext {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #5f5f5f;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.top-picks-title {
+  margin-top: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* 🌿 Card Grid */
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.plant-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.plant-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.plant-card p {
+  font-weight: bold;
+}
+
+.plant-card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f1600d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ✅ RESPONSIVE FIX FOR IPHONE (≤ 430px) */
+@media (max-width: 430px) {
+  .plants {
+    margin: 0 20px 50px 20px;
+    padding: 1rem;
+  }
+
+  .plants-header h2 {
+    font-size: 28px;
+  }
+
+  .top-picks-title {
+    font-size: 32px;
+  }
+
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* ✅ 2 cards per row */
+    gap: 1rem;
+  }
+
+  .plant-card {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+/* .plants {
     text-align: center;
     padding: 2rem;
     background: #f7f7f7;
     margin: 0 150px 50px 150px;
 }
-/* .plants {
-  margin: 0 150px 50px 150px;
-  text-align: center;
-} */
+
 
 .plants-header h2 {
   font-size: 36px;
@@ -144,10 +323,10 @@ body {
   font-size: 50px;
   font-weight: bold;
   color: #000000;
-}
+} */
 
 /* Responsive design */
-@media (max-width: 430px) {
+/* @media (max-width: 430px) {
   .plants {
     margin: 0 30px 50px 30px;
   }
@@ -159,15 +338,13 @@ body {
   .top-picks-title {
     font-size: 32px;
   }
-}
-
-/* .plants h2 {
-    margin-bottom: 0.5rem;
-}
-.plants p {
-    margin-bottom: 2rem;
 } */
-.plant-grid {
+
+
+
+
+
+/* .plant-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -196,7 +373,27 @@ body {
 .plant-card p{
     font-weight: bold;
 }
+ */
+
+
+
+
+
 /* Plant Lover Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .plant-lover {
     display: flex;
     align-items: center;
@@ -245,6 +442,39 @@ body {
     100% { transform: rotate(360deg); }
 }
 
+
+@media (max-width: 430px) {
+  .plant-lover {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 60px 30px; /* override desktop margin */
+    padding: 0;         /* remove side padding */
+  }
+
+  .lover-content {
+    width: 100%;
+  }
+
+  .lover-content ul {
+    padding-left: 20px; /* bullet indent */
+  }
+
+  .lover-image img:first-child {
+    height: auto;
+    width: 100%;
+  }
+
+  .trusted-badge {
+    display: none; /* as per requirement for mobile */
+  }
+}
+
+
+
+
+
+
 /* latest deal header section */
 .latest-deals {
   margin: 100px 150px 50px 150px;
@@ -283,6 +513,12 @@ body {
     font-size: 28px;
   }
 }
+
+
+
+
+
+
 
 
 /* latest deal body section the cart */
@@ -395,64 +631,6 @@ body {
 
 
 
-
-
-/* Join Section */
-/* .join {
-    padding: 3rem;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.join form {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.join input {
-    padding: 0.75rem;
-    border: none;
-    width: 300px;
-    max-width: 100%;
-    border-radius: 4px;
-    margin: 0.5rem;
-}
-.join button {
-    padding: 0.75rem 1.5rem;
-    background: #ff4081;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    margin: 0.5rem;
-    cursor: pointer;
-} */
-
-/* Deals Section */
-/* .deals {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f1f1f1;
-}
-.deal-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 1rem;
-}
-.deal-card {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #fff;
-}
-.deal-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-} */
 
 
 
@@ -602,8 +780,8 @@ body {
   opacity: 0.7;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ✅ Responsive Fix for iPhone (≤ 430px) */
+@media (max-width: 430px) {
   .footer {
     flex-direction: column;
     align-items: center;
@@ -614,14 +792,17 @@ body {
   .footer-links {
     flex-direction: column;
     align-items: center;
+    gap: 0px; /* ✅ Removes big gap between Contact Us and Features */
   }
 
   .footer-links ul {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* moderate spacing between ul stacks */
+  }
+
+  .footer-left {
+    text-align: center;
   }
 }
-
-
 
 
 
@@ -649,16 +830,8 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .plant-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .deal-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .nav-links ul {
         display: none;
     }
@@ -689,4 +862,4 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
-} */
+}  */

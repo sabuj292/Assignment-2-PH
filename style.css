@@ -555,7 +555,7 @@ body {
 
 /* newsletter */
 .newsletter {
-    background-image: url('/images/news-letter-bg.png');
+    background-image: url('images/news-letter-bg.png');
     background-size: cover;
     background-position: center;
     padding: 100px 20px;

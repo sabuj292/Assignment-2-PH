@@ -80,6 +80,12 @@ body {
 
   .navbar {
     padding: 20px 30px;
+    justify-content: center;          /*  Center entire navbar */
+    gap: 80px;                        
+  }
+
+  .nav-right {
+    gap: 0px; /* Optional: no need for inner right-side gap since only cart remains */
   }
 }
 
@@ -637,7 +643,7 @@ body {
 
 /* newsletter */
 .newsletter {
-  background-image: url('news-letter-bg.png'); /* 🔁 use your image name */
+  background-image: url('/images/news-letter-bg.png'); /* 🔁 use your image name */
   background-size: cover;
   background-position: center;
   padding: 100px 20px;

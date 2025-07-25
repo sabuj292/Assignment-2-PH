@@ -1,12 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 02 PH</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Market</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-logo">
+            <img src="logo.png" alt="Flower Market Logo">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Flowers</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="cart-icon"><a href="#"><img src="icon-cart.png" alt="Cart Icon"> Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Let flowers bloom in your space</h1>
+            <p>Order fresh flowers and decorate your home or office in the most beautiful way.</p>
+        </div>
+        <div class="banner-image">
+            <img src="sample-flower-image.png" alt="Flower Banner">
+        </div>
+    </section>
+
+    <!-- Plants Section -->
+    <section class="plants">
+        <h2>Top Flower Picks</h2>
+        <p>Bring home your favorite blossoms</p>
+        <div class="plant-grid">
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Rose Lily</h3>
+                <p>$15</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Sunflower</h3>
+                <p>$12</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Orchid</h3>
+                <p>$18</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Daisy</h3>
+                <p>$10</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Tulip</h3>
+                <p>$14</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Peony</h3>
+                <p>$16</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Lavender</h3>
+                <p>$11</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+            <div class="plant-card">
+                <img src="flower-store.png" alt="Plant Image">
+                <h3>Hydrangea</h3>
+                <p>$13</p>
+                <button onclick="alert('Flower Added to Cart')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plant Lover Section -->
+    <section class="plant-lover">
+        <div class="lover-image">
+            <img src="deal-ana.png" alt="Plant Lover">
+            <img src="trusted-badge.png" class="trusted-badge spin" alt="Trusted Badge">
+        </div>
+        <div class="lover-content">
+            <h2>Trusted by Plant Enthusiasts</h2>
+            <ul>
+                <li>Hand-picked quality</li>
+                <li>Fast and safe delivery</li>
+                <li>Customer satisfaction guaranteed</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="join" style="background-image: url('news-letter-bg.png');">
+        <h2>Join the Colorful Bunch</h2>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Latest Deals Section -->
+    <section class="deals">
+        <h2>Latest Deals</h2>
+        <p>Special offers this week</p>
+        <div class="deal-cards">
+            <div class="deal-card">
+                <img src="deal-bloom.png" alt="Bloom Deal">
+                <h3>Bloom Package</h3>
+                <p>Combo discount up to 25%</p>
+            </div>
+            <div class="deal-card">
+                <img src="deal-zabo.png" alt="Zabo Deal">
+                <h3>Zabo Deal</h3>
+                <p>Exclusive summer bouquet offer</p>
+            </div>
+            <div class="deal-card">
+                <img src="deal-ana.png" alt="Ana Deal">
+                <h3>Ana Deal</h3>
+                <p>Buy 1 get 1 free offer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+        </div>
+        <div class="footer-social">
+            <img src="icon-facebook.png" alt="Facebook">
+            <img src="icon-twitter.png" alt="Twitter">
+            <img src="icon-linkedin.png" alt="LinkedIn">
+            <img src="icon-youtube.png" alt="YouTube">
+        </div>
+    </footer>
 </body>
 </html>
